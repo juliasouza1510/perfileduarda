@@ -1,5 +1,13 @@
 
 :root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0;
-    --primary-bg-color: #111217;
+    --primary-bg-color: hsl(233, 4%, 36%);  
+}
+:root[data-thene='ligth'] {
+    --primary-color: #000;
+    --primari-bg-color: #f0f2f5;
+}
+body{
+    background:var(--primary-bg-color);  /*
+    color: var(--primary-color);
 }
