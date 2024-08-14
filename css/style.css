@@ -4,13 +4,105 @@
 
 :root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0;
-    --primary-bg-color: hsl(233, 4%, 36%);  
+    --primary-bg-color: #111217;
+    --secundary-bg-color:#28292E;
+    --primary-border-color:#28292E;
+    --secundary-border-color:#56575A;
+    --title-color:#F0F0F0;
+    --link-hover:#F0F0F0;
+    --link-color:#8F8F8F;
+    --icon-color:#C7C8C9;
 }
-:root[data-thene='ligth'] {
+:root[data-theme='light'] {
     --primary-color: #000;
-    --primari-bg-color: #f0f2f5;
+    --primary-bg-color: #f0f2f5;
+    --secundary-bg-color:#C7C8C9;
+    --primary-border-color:#C7C8C9;
+    --secundary-border-color:#9A9A9C;
+    --title-color:#0B0B0F;
+    --link-hover:#0B0B0F;
+    --link-color:#a3a2a2;
+    --icon-color:#56575A;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
 }
 body {
-    background:var(--primary-bg-color);  /*
-    color: var(--primary-color); */
+    background: var(--primary-bg-color);
+    font-family: 'Playwrite', 'Poppins', 'Rubik';
+    color: var(--primary-color);
 }
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+a:hover {
+    color: var(--primary-color);
+}
+i {
+    color: var(--icon-color);
+}
+.header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 2s;
+}
+.header-logo .logo {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+    gap: 1rem;
+}
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.menu-mobile {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border-color);
+}
+.menu-mobile .menu-link{
+    flex-direction:column;
+    justify-content: center;
+    padding: .5rem  1rem;
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover  .menu-icon,
+.menu-link:hover  .menu-text {
+    color: var(--link-hover);
+}
+
+.menu-icon, .menu-text {
+    color: var(--link-color);
+    font-weight: 600;
+}
+.menu-icon {
+    font-size:  1.5rem;
+}
+
