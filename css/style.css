@@ -196,5 +196,69 @@ display: none;
 
 }
 #home, .projetos, .sobre, .contato {
-    padding: 7rem 5rem;
+    padding: 5rem 5rem;
 }
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.card-cover {
+    width: 100%;
+    border-radius: 2rem;
+    object-fit: cover;
+    object-fit: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.card-title {
+    font-size: 2rem;
+    color:  var(--title-color);
+    font-weight: 400;
+    font-family:'rubik' ;
+}
+
+.card-description {
+    color: var(--primary-color);
+
+}
+
+.card-lista {
+    margin-left: 1.35rem;
+}
+
+.card-item {
+    list-style: disc;
+    margin: 0.23rem;
+}
+
+.card-buttom, .card-discription {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+.cardf-buttom .btn {
+    padding: .65rem 1.25rem;
+}
+
+.card-bottom span {
+    font-size: 1rem;
+
+}
+
