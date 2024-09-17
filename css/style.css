@@ -94,6 +94,8 @@ html[data-theme='light'] .logo2 {
     color: var(--icon-color);
     cursor: pointer;
     transition: ease-in-out .4s;
+    float: right;
+    position: relative;
 }
 
 .menu {
@@ -287,6 +289,97 @@ html[data-theme='light'] .logo2 {
 
 }
 
+.sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.sobre-content1, .sobre-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sobre-perfil {  /*----imagem----*/
+    width: 100%;
+    border-radius: 50rem;
+    border:8px solid var(--link-color--)
+
+}
+
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+    gap: 1rem;
+    
+}
+
+.sobre-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+.sobre-icones i {
+    font-size: 1.25rem;
+
+}
+
+.sobre-content2.col1, .sobre-content2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 1rem;
+
+}
+
+.sobre-content2.col1 .row1, .sobre-content2 .row2 {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+.accordion-header {
+    width: 100%;
+    display: flex;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--primary-border-color);
+    text-align: left;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+
+}
+
+.accordion-header span {
+    color: var(--title-color)
+}
+
+.accordion-header .start {
+    border-radius:  1rem 1rem 0rem 0rem;
+}
+
+.accordion-header.end, .accordion-item.active .accordion-body.end {
+    border-radius:  0rem 0rem 1rem 1rem;
+
+
+}
+
+.accordion-body {
+    /*display: none;*/
+    padding: 1.25rem;
+    flex-direction: column;
+    text-align:justify ;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid var(--primary-border-color);
+}
+
 /*==================-----------=========*/
 
 /*css responsivo*/
@@ -345,16 +438,59 @@ html[data-theme='light'] .logo2 {
 }
 
 @media (min-width: 992px) {
-    .projeto-card {
-        flex-direction: row;
+    @media (min-width: 992px) {
+        .projeto-card {
+            flex-direction: row;
+        }
+        .card-reverse {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .card-cover {
+            width: 35%;
+        }
+        .card-cover3 {
+            width: 20%;
+        }
+        .sobre {
+            gap: 5rem;
+        }
+        .sobre-content1, .sobre-content2 {
+            display: grid;
+            grid-template-columns: 34% 60%;
+            justify-content: flex-start;
+            align-items:flex-start ;
+            gap: 4rem;
+        }
     }
-
-    .card-reverse {
-        flex-direction: row-reverse;
-        justify-content: space-between;
+    
+    @media (min-width : 1200px) {
+        h2 {
+            font-size: 4rem;
+        }
+        h3 {
+            font-size: 2.5rem;
+        }
+        #home {
+            padding: 10rem 6rem 2rem;
+        }
+        p, span,li {
+            font-size: 1.15rem;
+        }
+        .card-buttom .btn, .descricao-buttom .btn {
+            width: auto;
+        }
     }
-    .card-cover {
-        width: 35%;
+    
+    @media (min-width: 1400px) {
+        h1{
+            font-size: 6.25rem;;
+        }
+        h2{
+            font-size: 4.5rem;;
+        }
+        h3{
+            font-size: 3.25rem;;
+        }
     }
 }
-
