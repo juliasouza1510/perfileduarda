@@ -306,7 +306,6 @@ html[data-theme='light'] .logo2 {
     border:8px solid var(--link-color--)
 
 }
-
 .sobre-descricao {
     display: flex;
     flex-direction: column;
@@ -315,32 +314,25 @@ html[data-theme='light'] .logo2 {
     gap: 1rem;
     
 }
-
 .sobre-icons {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 
 }
-
 .sobre-icones i {
     font-size: 1.25rem;
-
 }
-
 .sobre-content2.col1, .sobre-content2 {
     display: flex;
     flex-direction: column;
     text-align: justify;
     gap: 1rem;
-
 }
-
 .sobre-content2.col1 .row1, .sobre-content2 .row2 {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-
 }
 .accordion-header {
     width: 100%;
@@ -353,31 +345,34 @@ html[data-theme='light'] .logo2 {
     text-align: left;
     cursor: pointer;
     transition: ease-in-out .3s;
-
 }
-
 .accordion-header span {
-    color: var(--title-color)
+    color: var(--title-color);
 }
-
-.accordion-header .start {
-    border-radius:  1rem 1rem 0rem 0rem;
+.accordion-header.start {
+    border-radius: 1rem 1rem 0rem 0rem;
 }
-
-.accordion-header.end, .accordion-item.active .accordion-body.end {
-    border-radius:  0rem 0rem 1rem 1rem;
-
-
+.accordion-header.end,
+.accordion-item.active .accordion-body.end {
+    border-radius: 0rem 0rem 1rem 1rem;
 }
-
+.accordion-item.active .accordion-item.end {
+    border: 0;
+}
 .accordion-body {
-    /*display: none;*/
+    display: none;
     padding: 1.25rem;
     flex-direction: column;
-    text-align:justify ;
+    text-align: justify;
     align-items: flex-start;
     gap: 1rem;
     border: 1px solid var(--primary-border-color);
+}
+.accordion-item.active .accordion-header {
+    background: var(--secondary-bg-color);
+}
+.accordion-item.active .accordion-body {
+    display: flex;
 }
 
 /*==================-----------=========*/

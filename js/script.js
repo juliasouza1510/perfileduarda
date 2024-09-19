@@ -1,18 +1,20 @@
 const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement;
-
-// Função para alterar o tema
-function changeTheme() {
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+//função para alterar o tema
+function changeTheme () {
     const currentTheme = rootHtml.getAttribute("data-theme");
-
-    if (currentTheme === "dark") {
-        rootHtml.setAttribute("data-theme", "light");
-    } else {
-        rootHtml.setAttribute("data-theme", "dark");
-    }
-
+    currentTheme === "dark" ? rootHtml.setAttribute("data-theme", "light") : rootHtml.setAttribute("data-theme", "dark");
     toggleTheme.classList.toggle("bi-sun");
     toggleTheme.classList.toggle("bi-moon-stars");
 }
-
 toggleTheme.addEventListener("click", changeTheme);
+//fim da função mudar o tema
+
+accordionHeaders.forEach(header =>{
+    header.addEventListener("click", () => {
+        const accordionItem = header.parentElement;
+        const accordionActive = accordionItem.classList.contains("active");
+        accordionActive ? accordionItem.classList.remove("active") : accordionItem.classList.add("active");
+    })
+})
